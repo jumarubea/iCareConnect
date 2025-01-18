@@ -12,7 +12,7 @@
       mode="indeterminate"
       *ngIf="loading || !params?.exemptionOrderType"
     ></mat-progress-bar>
-    <!-- patient list -->
+    <!-- this is the patient list -->
     <div class="mat-elevation-z1" *ngIf="visitsLength > 0">
       <app-table [columns]="billingColumns" [loading]="loadingVisits" [loadingDataError]="loadingVisitsError"
         [tableConfig]="tableConfig" [data$]="visits$" (selectRow)="onSelectVisit($event)"></app-table>
